@@ -28,7 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.Lab08 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // Lab08
+            // 
+            this.Lab08.AutoSize = true;
+            this.Lab08.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lab08.Location = new System.Drawing.Point(223, 165);
+            this.Lab08.Name = "Lab08";
+            this.Lab08.Size = new System.Drawing.Size(156, 37);
+            this.Lab08.TabIndex = 0;
+            this.Lab08.Text = "lab8Label";
+            this.Lab08.Click += new System.EventHandler(this.Lab08_Click);
             // 
             // Lab8Form
             // 
@@ -36,14 +49,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.Controls.Add(this.Lab08);
             this.Name = "Lab8Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lab8Form.cs";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Label Lab08;
     }
 }
 

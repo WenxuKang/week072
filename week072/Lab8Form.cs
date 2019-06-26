@@ -16,5 +16,10 @@ namespace week072
         {
             InitializeComponent();
         }
+
+        private void Lab08_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
