@@ -36,6 +36,7 @@
             this.Agetextbox = new System.Windows.Forms.TextBox();
             this.AgeLabel = new System.Windows.Forms.Label();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.outputLabel = new System.Windows.Forms.Label();
             this.InfoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +95,7 @@
             this.Agetextbox.Name = "Agetextbox";
             this.Agetextbox.Size = new System.Drawing.Size(368, 38);
             this.Agetextbox.TabIndex = 3;
+            this.Agetextbox.TextChanged += new System.EventHandler(this.Agetextbox_TextChanged);
             // 
             // AgeLabel
             // 
@@ -117,6 +119,17 @@
             this.SubmitButton.Text = "submit";
             this.SubmitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.SubmitButton.UseVisualStyleBackColor = false;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
+            // outputLabel
+            // 
+            this.outputLabel.Enabled = false;
+            this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.outputLabel.Location = new System.Drawing.Point(36, 359);
+            this.outputLabel.Name = "outputLabel";
+            this.outputLabel.Size = new System.Drawing.Size(408, 31);
+            this.outputLabel.TabIndex = 4;
+            this.outputLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // Lab8Form
             // 
@@ -124,12 +137,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(624, 441);
+            this.ControlBox = false;
+            this.Controls.Add(this.outputLabel);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.InfoGroupBox);
             this.Controls.Add(this.Lab08);
+            this.MaximizeBox = false;
             this.Name = "Lab8Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lab8Form.cs";
+            this.Load += new System.EventHandler(this.Lab8Form_Load);
             this.InfoGroupBox.ResumeLayout(false);
             this.InfoGroupBox.PerformLayout();
             this.ResumeLayout(false);
@@ -147,6 +164,7 @@
         private System.Windows.Forms.TextBox Agetextbox;
         private System.Windows.Forms.Label AgeLabel;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label outputLabel;
     }
 }
 
